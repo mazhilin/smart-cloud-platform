@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+	https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.smart.cloud</groupId>
+		<artifactId>smart-cloud-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath/>
+	</parent>
+	<groupId>com.smart.cloud</groupId>
+	<artifactId>smart-cloud-platform</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>smart-cloud-platform</name>
+	<packaging>pom</packaging>
+	<description>SmartCloud云服务应用平台</description>
+
+	<properties>
+		<java.version>1.8</java.version>
+		<smart-cloud.version>0.0.1-SNAPSHOT</smart-cloud.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<!--TurboCloud依赖配置-->
+			<dependency>
+				<groupId>com.smart.cloud</groupId>
+				<artifactId>smart-cloud-dependencies</artifactId>
+				<version>${smart-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+			<!--TurboCloud依赖配置-->
+			<dependency>
+				<groupId>com.smart.cloud</groupId>
+				<artifactId>smart-cloud-parent</artifactId>
+				<version>${smart-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>com.smart.cloud</groupId>
+				<artifactId>smart-cloud-admin-api</artifactId>
+				<version>${smart-cloud.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.smart.cloud</groupId>
+				<artifactId>smart-cloud-admin-domain</artifactId>
+				<version>${smart-cloud.version}</version>
+			</dependency>
+
+
+			<dependency>
+				<groupId>com.smart.cloud</groupId>
+				<artifactId>smart-cloud-base-api</artifactId>
+				<version>${smart-cloud.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.smart.cloud</groupId>
+				<artifactId>smart-cloud-base-domain</artifactId>
+				<version>${smart-cloud.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.smart.cloud</groupId>
+				<artifactId>smart-cloud-business-api</artifactId>
+				<version>${smart-cloud.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.smart.cloud</groupId>
+				<artifactId>smart-cloud-business-domain</artifactId>
+				<version>${smart-cloud.version}</version>
+			</dependency>
+
+
+			<dependency>
+				<groupId>com.smart.cloud</groupId>
+				<artifactId>smart-cloud-passport-api</artifactId>
+				<version>${smart-cloud.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.smart.cloud</groupId>
+				<artifactId>smart-cloud-passport-domain</artifactId>
+				<version>${smart-cloud.version}</version>
+			</dependency>
+
+
+			<dependency>
+				<groupId>com.smart.cloud</groupId>
+				<artifactId>smart-cloud-transaction-api</artifactId>
+				<version>${smart-cloud.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.smart.cloud</groupId>
+				<artifactId>smart-cloud-transaction-domain</artifactId>
+				<version>${smart-cloud.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.smart.cloud</groupId>
+				<artifactId>smart-cloud-workflow-api</artifactId>
+				<version>${smart-cloud.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.smart.cloud</groupId>
+				<artifactId>smart-cloud-workflow-domain</artifactId>
+				<version>${smart-cloud.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.smart.cloud</groupId>
+				<artifactId>smart-cloud-workflow-domain</artifactId>
+				<version>${smart-cloud.version}</version>
+			</dependency>
+
+
+			<dependency>
+				<groupId>com.smart.cloud</groupId>
+				<artifactId>smart-cloud-application-adapter</artifactId>
+				<version>${smart-cloud.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.smart.cloud</groupId>
+				<artifactId>smart-cloud-authserver-adapter</artifactId>
+				<version>${smart-cloud.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.smart.cloud</groupId>
+				<artifactId>smart-cloud-resourceserver-adapter</artifactId>
+				<version>${smart-cloud.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.smart.cloud</groupId>
+				<artifactId>smart-cloud-logger-adapter</artifactId>
+				<version>${smart-cloud.version}</version>
+			</dependency>
+
+		</dependencies>
+	</dependencyManagement>
+
+	<repositories>
+		<repository>
+			<id>central</id>
+			<url>https://maven.aliyun.com/nexus/content/groups/public</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>snapshots</id>
+			<url>https://maven.aliyun.com/nexus/content/groups/public</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>rdc-releases</id>
+			<url>https://packages.aliyun.com/maven/repository/2022020-release-dkLtZC/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>rdc-snapshots</id>
+			<url>https://packages.aliyun.com/maven/repository/2022020-snapshot-3D7bcq/</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>central</id>
+			<url>https://maven.aliyun.com/nexus/content/groups/public</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+		<pluginRepository>
+			<id>snapshots</id>
+			<url>https://maven.aliyun.com/nexus/content/groups/public</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</pluginRepository>
+		<pluginRepository>
+			<id>rdc-releases</id>
+			<url>https://packages.aliyun.com/maven/repository/2022020-release-dkLtZC/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+		<pluginRepository>
+			<id>rdc-snapshots</id>
+			<url>https://packages.aliyun.com/maven/repository/2022020-snapshot-3D7bcq/</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+
+	<distributionManagement>
+		<repository>
+			<id>rdc-releases</id>
+			<name>ReleasesProxy</name>
+			<url>https://packages.aliyun.com/maven/repository/2022020-release-dkLtZC/</url>
+		</repository>
+		<snapshotRepository>
+			<id>rdc-snapshots</id>
+			<name>SnapshotsProxy</name>
+			<url>https://packages.aliyun.com/maven/repository/2022020-snapshot-3D7bcq/</url>
+		</snapshotRepository>
+
+	</distributionManagement>
+
+	<modules>
+		<!--SmartCloud云服务API适配模块-->
+		<module>smart-cloud-adapter</module>
+		<!--SmartCloud云服务API接口模块-->
+		<module>smart-cloud-api</module>
+		<!--SmartCloud云服务API中心模块-->
+		<module>smart-cloud-center</module>
+		<!--SmartCloud云服务API领域模块-->
+		<module>smart-cloud-domain</module>
+		<!--SmartCloud云服务API应用模块-->
+		<module>smart-cloud-web</module>
+	</modules>
+
+	<profiles>
+		<profile>
+			<!-- develop 环境 -->
+			<id>develop</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<profile.active>develop</profile.active>
+				<logback.dir>./app/logs</logback.dir>
+			</properties>
+		</profile>
+		<profile>
+			<!-- preview环境 -->
+			<id>test</id>
+			<properties>
+				<profile.active>test</profile.active>
+				<logback.dir>./app/logs</logback.dir>
+			</properties>
+		</profile>
+		<profile>
+			<!-- preview环境 -->
+			<id>preview</id>
+			<properties>
+				<profile.active>preview</profile.active>
+				<logback.dir>./app/logs</logback.dir>
+			</properties>
+		</profile>
+		<profile>
+			<!-- product 环境 -->
+			<id>product</id>
+			<properties>
+				<profile.active>product</profile.active>
+				<logback.dir>./app/logs</logback.dir>
+			</properties>
+		</profile>
+	</profiles>
+</project>
